@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '1.5-SNAPSHOT'
+	id 'fabric-loom' version '1.8-SNAPSHOT'
 	id 'maven-publish'
 }
 
@@ -38,12 +38,14 @@ dependencies {
 
 	modApi "fuzs.forgeconfigapiport:forgeconfigapiport-fabric:${project.forgeconfigapiport_version}"
 
-	modImplementation "maven.modrinth:sodium:mc1.20.1-0.5.8"
-	modImplementation "me.flashyreese.mods:sodium-extra-fabric:0.5.4+mc1.20.1-build.115"
-	modImplementation "maven.modrinth:modmenu:7.2.2"
+	modImplementation "maven.modrinth:sodium:${project.sodium_version}-fabric"
+	modImplementation "me.flashyreese.mods:sodium-extra-fabric:${project.sodium_extra_version}"
+	modImplementation "maven.modrinth:modmenu:${project.modmenu_version}"
 
 	include(implementation("com.moulberry:mixinconstraints:${project.mixinconstraints_version}"))
-	modImplementation "maven.modrinth:iris:${project.iris_version}"
+	modImplementation "maven.modrinth:iris:${project.iris_version}-fabric"
+
+	include(implementation(annotationProcessor("io.github.llamalad7:mixinextras-fabric:0.4.1")))
 }
 
 processResources {

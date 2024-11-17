@@ -1,10 +1,10 @@
 package net.jmb19905.client;
 
-import fuzs.forgeconfigapiport.api.config.v2.ForgeConfigRegistry;
+import fuzs.forgeconfigapiport.fabric.api.forge.v4.ForgeConfigRegistry;
 import net.fabricmc.api.ClientModInitializer;
 import net.jmb19905.Caelum;
 import net.jmb19905.config.ConfigHelper;
-import net.minecraftforge.fml.config.ModConfig;
+import net.neoforged.fml.config.ModConfig;
 
 public class CaelumClient implements ClientModInitializer {
 
